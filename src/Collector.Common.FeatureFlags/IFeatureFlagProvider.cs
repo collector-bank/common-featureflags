@@ -13,6 +13,6 @@ namespace Collector.Common.FeatureFlags
 
         int GetIntFlag<T>(int defaultValue) where T : FeatureFlag<int>, new();
 
-        string GetStringFlag<T>(string defaultValue) where T : FeatureFlag<int>, new();
+        string GetStringFlag<T>(string defaultValue) where T : FeatureFlag<string>, new();
     }
 }
