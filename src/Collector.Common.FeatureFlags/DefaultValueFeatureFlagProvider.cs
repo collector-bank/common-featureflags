@@ -22,7 +22,7 @@ namespace Collector.Common.FeatureFlags
             return defaultValue;
         }
 
-        public string GetStringFlag<T>(string defaultValue) where T : FeatureFlag<int>, new()
+        public string GetStringFlag<T>(string defaultValue) where T : FeatureFlag<string>, new()
         {
             return defaultValue;
         }
