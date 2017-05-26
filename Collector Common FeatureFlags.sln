@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{23C8E629-7C87-498B-8712-67467E054A35}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{6F48E0D2-D829-4683-8B5A-7894206DB612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collector.Common.FeatureFlags", "src\Collector.Common.FeatureFlags\Collector.Common.FeatureFlags.csproj", "{5D8A6B9E-4BAB-47AC-B236-08FB4C3FFE6A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13E4F319-24C4-4B74-85B8-F9BBB0FBB5BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collector.Common.FeatureFlags", "src\Collector.Common.FeatureFlags\Collector.Common.FeatureFlags.csproj", "{9D1818DC-B014-4BAD-A6A4-827BD2247CC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,15 +15,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5D8A6B9E-4BAB-47AC-B236-08FB4C3FFE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D8A6B9E-4BAB-47AC-B236-08FB4C3FFE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D8A6B9E-4BAB-47AC-B236-08FB4C3FFE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D8A6B9E-4BAB-47AC-B236-08FB4C3FFE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1818DC-B014-4BAD-A6A4-827BD2247CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1818DC-B014-4BAD-A6A4-827BD2247CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1818DC-B014-4BAD-A6A4-827BD2247CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1818DC-B014-4BAD-A6A4-827BD2247CC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5D8A6B9E-4BAB-47AC-B236-08FB4C3FFE6A} = {23C8E629-7C87-498B-8712-67467E054A35}
+		{9D1818DC-B014-4BAD-A6A4-827BD2247CC9} = {13E4F319-24C4-4B74-85B8-F9BBB0FBB5BC}
 	EndGlobalSection
 EndGlobal
