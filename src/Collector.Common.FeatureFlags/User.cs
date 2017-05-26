@@ -10,15 +10,17 @@ namespace Collector.Common.FeatureFlags
 
     public class User
     {
-        public User(string key)
+        private const string CANNOT_BE_NULL_OR_EMPTY = "Cannot be null or empty.";
+
+        public User(string teamKeyPart, string userKeyPart)
         {
-            if (key == null)
-                throw new ArgumentNullException(nameof(key), "Key is required.");
+            if (string.IsNullOrWhiteSpace(teamKeyPart))
+                throw new ArgumentException(CANNOT_BE_NULL_OR_EMPTY, nameof(teamKeyPart));
 
-            if (string.IsNullOrWhiteSpace(key))
-                throw new ArgumentException("Key cannot be empty.", nameof(key));
+            if (string.IsNullOrWhiteSpace(userKeyPart))
+                throw new ArgumentException(CANNOT_BE_NULL_OR_EMPTY, nameof(userKeyPart));
 
-            Key = key;
+            Key = $"{teamKeyPart}-{userKeyPart}";
             CustomAttributes = new Dictionary<string, object>();
         }
 
@@ -28,13 +30,11 @@ namespace Collector.Common.FeatureFlags
 
         public string CountryCode { get; set; }
 
-        public string TeamName { get; set; }
-
         public IDictionary<string, object> CustomAttributes { get; }
 
         public User With(string customAttributeName, object customAttributeValue)
         {
-            this.CustomAttributes[customAttributeName] = customAttributeValue;
+            CustomAttributes[customAttributeName] = customAttributeValue;
 
             return this;
         }
