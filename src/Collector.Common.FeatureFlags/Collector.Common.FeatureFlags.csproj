@@ -4,12 +4,14 @@
     <TargetFrameworks>netstandard1.6;net452</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Company>Collector Bank AB</Company>
-    <Authors>Heimdal</Authors>
-    <Version>2.0.2</Version>
+    <Authors>Team Heimdal</Authors>
+    <Version>2.0.3</Version>
     <PackageProjectUrl>https://github.com/collector-bank/common-featureflags</PackageProjectUrl>
     <RepositoryUrl>https://github.com/collector-bank/common-featureflags</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Description>An abstraction for feature flagging.</Description>
+    <PackageIconUrl>https://raw.githubusercontent.com/collector-bank/common-featureflags/master/icon.png</PackageIconUrl>
+    <PackageTags>collectorbank collector feature-flags feature-toggle</PackageTags>
   </PropertyGroup>
 
 </Project>
