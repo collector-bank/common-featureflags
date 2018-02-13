@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Company>Collector Bank AB</Company>
     <Authors>Team Heimdal</Authors>
-    <Version>2.0.3</Version>
+    <Version>2.1.0</Version>
     <PackageProjectUrl>https://github.com/collector-bank/common-featureflags</PackageProjectUrl>
     <RepositoryUrl>https://github.com/collector-bank/common-featureflags</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
