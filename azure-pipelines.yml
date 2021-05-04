@@ -1,0 +1,43 @@
+name: $(Date:yyyy.MM.dd)$(Rev:.r)
+
+trigger:
+- master
+
+pr:
+- master
+
+steps:
+- checkout: self
+  clean: "true"
+
+- task: NuGetToolInstaller@0
+  displayName: "NuGet use 4.8.1"
+  inputs:
+    versionSpec: 4.8.1
+    
+- task: DotNetCoreInstaller@1
+  displayName: 'Use .NET Core SDK 3.1.200'
+  inputs:
+    version: 3.1.200
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    feedsToUse: config
+    nugetConfigPath: nuget.config
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  inputs:
+    command: build
+    arguments: '-c Release --no-restore'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet push to edge'
+  inputs:
+    command: push
+    packagesToPush: '**/bin/Release/*.nupkg;!**/*.symbols.nupkg'      
+    publishVstsFeed: '52a894dd-f9d7-49c4-8dac-417a2419cc90'
+    
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
